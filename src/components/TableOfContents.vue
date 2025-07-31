@@ -38,7 +38,7 @@ import { NCard, NAnchor, NAnchorLink } from 'naive-ui'
 interface Item {
   id: string
   title: string
-  content: string
+  content: any
 }
 
 defineProps<{
