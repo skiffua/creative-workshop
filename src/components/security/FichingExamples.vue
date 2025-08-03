@@ -153,8 +153,10 @@
         Пояснити
       </button>
     </div>
+    <n-button @click="showUsers = !showUsers">{{ showUsers ? 'Показати користувачів' : 'Сховати користувачів' }}</n-button>
+    <UserTable v-if="showUsers" />
 
-    Приклади фішингових атак:
+    <div>Приклади фішингових атак:</div>
     <Link
         text='Фейковий Бред Пітт виманив у жінки 830 тисяч євро, її ... (2025)'
         url='https://suspilne.media/culture/927161-pisla-efiru-pro-fejkovogo-breda-pitta-zinka-zitknulasa-z-hvileu-kiberbulingu-programu-zrestou-vidalili/'
@@ -173,11 +175,16 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import Link from '../Link.vue';
+import UserTable from '../UserTable.vue';
+
 const toggleExplain = (id) => {
   const el = document.getElementById(id);
   el.style.display = el.style.display === 'none' ? 'block' : 'none';
 }
+
+const showUsers = ref(false);
 </script>
 
 <style scoped>

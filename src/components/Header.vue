@@ -13,7 +13,7 @@ const count = ref(0)
         <n-breadcrumb-item><RouterLink to="/security">Інформаційні загрози</RouterLink></n-breadcrumb-item>
         <n-breadcrumb-item><RouterLink to="/education">Навчання в Інтернеті</RouterLink></n-breadcrumb-item>
         <n-breadcrumb-item><RouterLink to="/ai">ШІ</RouterLink></n-breadcrumb-item>
-        <n-breadcrumb-item><RouterLink to="/">Державні сервіси</RouterLink></n-breadcrumb-item>
+        <n-breadcrumb-item><RouterLink to="/state-services">Державні сервіси</RouterLink></n-breadcrumb-item>
       </n-breadcrumb>
     </template>
   </n-page-header>

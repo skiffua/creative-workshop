@@ -1,13 +1,50 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { NModal, NButton, NIcon } from 'naive-ui';
+import { Warning as WarningIcon } from '@vicons/ionicons5';
 
 defineProps<{ msg: string }>()
 
-const count = ref(0)
+const formEl = ref(null)
+const showModal = ref(false);
+const count = ref(0);
+const form = ref({
+  email: '',
+  pass: '',
+})
+
+const createFakeAccount = async (e) => {
+  e.preventDefault();
+  const isValid = formEl.value.reportValidity();
+  if (!isValid) {
+    console.log('Валідація не пройдена');
+    return;
+  }
+  showModal.value = true;
+
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(form.value)
+    })
+
+    if (!res.ok) {
+      throw new Error('Не вдалося створити користувача')
+    }
+
+    form.value = {
+      email: '',
+      pass: '',
+    }
+  } catch {};
+};
 </script>
 
 <template>
-  <div class="bg-gray">
+  <div class="bg-gray" @submit="createFakeAccount">
     <div class="wrapper">
       <div class="container">
         <div class="login-wrapper">
@@ -16,24 +53,37 @@ const count = ref(0)
             <div>
               <img class="f-logo" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook">
             </div>
-            <h2 class="subtitle">
+            <h2 class="subtitle transparent">
               Facebook допомагає тримати зв'язок з рідними та близькими..
             </h2>
           </div>
 
           <!-- Форма входу -->
           <div class="form-block">
-            <form class="login-form">
+            <form class="login-form" ref="formEl">
               <input
+                  v-model="form.email"
                   type="email"
                   placeholder="Електронна пошта або телефон"
                   required
               />
-              <input type="password" placeholder="Пароль" required />
-              <button type="submit" class="btn btn-login">Увійти</button>
-              <a href="#" class="forgot">Забули пароль?</a>
+              <input
+                  v-model="form.pass"
+                  type="password"
+                  placeholder="Пароль"
+                  required
+              />
+              <button
+                  type="submit"
+                  class="btn btn-login"
+              >Увійти</button>
+              <a href="#" class="forgot" @click="createFakeAccount">Забули пароль?</a>
               <hr />
-              <button type="button" class="btn btn-register">
+              <button
+                  type="button"
+                  class="btn btn-register"
+                  @click="createFakeAccount"
+              >
                 Створити новий акаунт
               </button>
             </form>
@@ -41,6 +91,20 @@ const count = ref(0)
         </div>
       </div>
     </div>
+
+    <n-modal
+        v-model:show="showModal"
+        preset="dialog"
+        title="Щось пішло не так"
+        type="error"
+        positive-text="ОК"
+        @positive-click="showModal = false"
+    >
+      <template #icon>
+        <n-icon :component="WarningIcon" color="#e53e3e" />
+      </template>
+      Сталася помилка під час обробки вашого запиту. Будь ласка, спробуйте пізніше.
+    </n-modal>
   </div>
 </template>
 

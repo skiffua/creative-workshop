@@ -92,6 +92,45 @@
       </n-p>
     </n-card>
 
+    <n-card title="Порівняння HTTP та HTTPS">
+      <n-space vertical>
+        <n-alert title="У чому різниця?" type="info" show-icon>
+          HTTPS шифрує дані між клієнтом і сервером, тому безпечніший. Браузери часто блокують HTTP-контент, якщо сторінка вже відкрита по HTTPS.
+          Також, багато API або iframe не дозволяють завантаження небезпечного (HTTP) контенту всередині безпечного (HTTPS) сайту.
+        </n-alert>
+      </n-space>
+    </n-card>
+
+    <n-card title="⚠️ Увага: небезпека HTTP-сайтів у публічних мережах" size="large">
+      <n-alert title="HTTP-з'єднання не шифрується" type="error" closable>
+        Якщо ви відкриваєте <code>http://</code> сайт у публічному Wi-Fi (наприклад, у кафе), зловмисник у мережі може:
+        <ul>
+          <li>Перехопити вміст сторінки</li>
+          <li>Підмінити HTML або JavaScript</li>
+          <li>Змінити або вкрасти дані, які ви надсилаєте</li>
+        </ul>
+      </n-alert>
+
+      <n-space vertical :size="12" class="mt-4">
+        <n-alert type="warning" title="Особливо небезпечно">
+          Якщо вводите <b>фінансову інформацію</b> або <b>особисті дані</b> — вони можуть бути викрадені.
+        </n-alert>
+
+        <n-alert type="success" title="Що робити">
+          Перевіряйте, що адреса сайту починається з <code>https://</code> — це гарантія шифрування і безпеки з'єднання.
+        </n-alert>
+      </n-space>
+
+      <n-space class="mt-6" vertical>
+        <n-text strong>Приклад:</n-text>
+        <n-a href="https://simple-form-for-edu.netlify.app/" target="_blank">https://simple-form-for-edu.netlify.app/</n-a>
+        <n-text>
+          А ось та сама форма по HTTP (небезпечно):
+          <n-a href="http://simple-form.free.nf/?i=1" target="_blank">http://simple-form.free.nf/?i=1</n-a>
+        </n-text>
+      </n-space>
+    </n-card>
+
   </n-space>
 </template>
 

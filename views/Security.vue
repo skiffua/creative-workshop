@@ -11,7 +11,7 @@ import Spam from '../src/components/security/Spam.vue';
 const sections = [
   {
     id: 'section-1',
-    title: 'Класифікація загроз',
+    title: 'Що вважаємо загрозою?',
     content: Clacification,
   },
   {
