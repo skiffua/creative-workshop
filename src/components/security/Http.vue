@@ -2,18 +2,29 @@
   <n-space vertical :size="20">
     <n-card title="🌐 HTTP (HyperText Transfer Protocol)" size="large" embedded>
       <n-timeline>
-        <n-timeline-item title="HTTP/0.9" content="Перший протокол передачі HTML, 1991 рік" />
-        <n-timeline-item title="HTTP/1.1" content="1997 — кешування, keep-alive" />
-        <n-timeline-item title="HTTP/2" content="2015 — багатопоточність, стиснення заголовків" />
-        <n-timeline-item title="HTTP/3" content="2020 — UDP (QUIC), краща швидкість з'єднання" />
-        <n-timeline-item title="SSL 2.0 / 3.0" content="Спроби захисту HTTP, 1995 / 1996 роки" />
-        <n-timeline-item title="TLS 1.0" content="Перший офіційний стандарт шифрування, 1999 рік" />
-        <n-timeline-item type="success" title="Зелена адресна стрічка (EV сертифікати)" content="2007 — браузери почали позначати сайти з EV-сертифікатами зеленим замком і назвою компанії" />
-        <n-timeline-item title="TLS 1.3" content="Шифрування з перших байтів, 2018 рік" />
-        <n-timeline-item type="warning" title="Скасування зеленої адреси" content="2020 — Chrome та інші припинили виділяти EV сертифікати; залишився лише замок" />
-        <n-timeline-item title="Браузер Mosaic" content="Перший масовий графічний браузер, 1993 рік" />
+        <!-- Ранні HTTP та браузери -->
+        <n-timeline-item title="HTTP/0.9" content="1991 — перший простий протокол для передачі HTML, лише GET-запити" />
+        <n-timeline-item title="Браузер Mosaic" content="1993 — перший популярний графічний браузер" />
+        <n-timeline-item title="SSL 2.0 / 3.0" content="1995 / 1996 — перші спроби шифрування HTTP, небезпечні версії SSL" />
+        <n-timeline-item title="HTTP/1.0" content="1996 — базова версія з підтримкою статус-кодів та заголовків" />
+        <n-timeline-item title="HTTP/1.1" content="1997 — покращене кешування, keep-alive, chunked transfer encoding" />
+        <n-timeline-item title="TLS 1.0" content="1999 — перший стандарт безпечного шифрування, заміна SSL" />
+
+        <!-- Браузери 2000-х -->
         <n-timeline-item title="Інші браузери" content="Firefox (2002), Safari (2003), Chrome (2008), Edge (2015)" />
+        <n-timeline-item type="success" title="EV сертифікати (зелена адресна стрічка)" content="2007 — браузери показують зелену назву компанії для EV-сертифікатів" />
+
+        <!-- Новіші протоколи та TLS -->
+        <n-timeline-item title="HTTP/2" content="2015 — мультиплексування, стиснення заголовків, пріоритезація потоків" />
+        <n-timeline-item title="TLS 1.3" content="2018 — швидке та більш безпечне шифрування, починаючи з першого байту" />
+
+        <!-- Події 2020+ -->
+        <n-timeline-item type="warning" title="Скасування зеленої адреси" content="2020 — Chrome та інші перестали виділяти EV сертифікати зеленим, залишився тільки замок" />
+        <n-timeline-item title="HTTP/3" content="2020 — швидше й стабільніше з’єднання завдяки QUIC поверх UDP" />
+        <n-timeline-item title="Впровадження HTTP/3 у браузерах" content="2021–2022 — підтримка HTTP/3 включена у Chrome, Firefox, Edge, Safari" />
+        <n-timeline-item title="TLS 1.3 поширюється" content="2021–2023 — більшість сайтів та CDN переходять на TLS 1.3 для швидшого та безпечнішого з’єднання" />
       </n-timeline>
+
       <n-p>
         HTTP — основа взаємодії між клієнтом і сервером. HTTPS забезпечує захист через TLS.
       </n-p>
