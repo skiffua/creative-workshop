@@ -58,12 +58,6 @@ const platforms = [
     link: 'https://osvita.diia.gov.ua/',
     forYouth: true
   },
-  // {
-  //   name: 'Stepik',
-  //   description: 'Платформа для самонавчання з інтерактивними завданнями, особливо з ІТ.',
-  //   link: 'https://stepik.org/',
-  //   forYouth: true
-  // },
   {
     name: 'Khan Academy',
     description: 'Безкоштовні освітні відео та тести з математики, фізики, економіки тощо.',
