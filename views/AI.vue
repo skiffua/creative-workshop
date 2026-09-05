@@ -36,7 +36,7 @@
         <n-card embedded style="text-align: left">
           <template #header>
             <n-p>
-              🧪 <strong>Практична робота №2: Електронне урядування, штучний інтелект</strong>
+              🧪 <strong>Практична робота №2: ШІ для навчання та творчості. Системи електронного врядування</strong>
             </n-p>
           </template>
           <n-ul>
@@ -46,7 +46,7 @@
               </n-a>
             </n-li>
             <n-li>
-              <n-a href="https://docs.google.com/document/d/1JzX25MhAfeh0hv3Fx5ssQwB3rmArG3ZoU-4vlIXuTzY/edit?usp=sharing" target="_blank">
+              <n-a href="https://docs.google.com/document/d/1QTKh5cxnutRugOA-FkTKrAdfOCr1t4dKdVj-ldTsK3I/edit?usp=sharing" target="_blank">
                 10-Б
               </n-a>
             </n-li>
@@ -54,27 +54,6 @@
         </n-card>
       </n-space>
     </n-space>
-
-    <!-- Практична робота №1 -->
-    <n-card embedded>
-      <template #header>
-        <n-p>
-          🧪 <strong>Творче завдання №2: ШІ для навчання та творчості. Системи електронного врядування</strong>
-        </n-p>
-      </template>
-      <n-ul>
-        <n-li>
-          <n-a href="https://docs.google.com/document/d/1maaP7xen477cmxDyR58TdR2Ryi3gArIoG1uhtuspQe8/edit?usp=sharing" target="_blank">
-            10-А
-          </n-a>
-        </n-li>
-        <n-li>
-          <n-a href="https://docs.google.com/document/d/1Az1JxbYiZupLe5rwM9JANtAbaQSMZg67xyQ_kyEabnc/edit?usp=sharing" target="_blank">
-            10-Б
-          </n-a>
-        </n-li>
-      </n-ul>
-    </n-card>
   </n-page>
 </template>
 
