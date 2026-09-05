@@ -12,7 +12,14 @@
 
         <!-- Браузери 2000-х -->
         <n-timeline-item title="Інші браузери" content="Firefox (2002), Safari (2003), Chrome (2008), Edge (2015)" />
-        <n-timeline-item type="success" title="EV сертифікати (зелена адресна стрічка)" content="2007 — браузери показують зелену назву компанії для EV-сертифікатів" />
+        <n-timeline-item type="success" title="Зелена адресна стрічка (EV сертифікати)">
+          <div>2007 — браузери почали позначати сайти з EV-сертифікатами зеленим замком і назвою компанії</div>
+          <img
+              src="/ssl-sertificate-website-icon.png"
+              alt="EV Certificate Bar"
+              style="max-width: 100%; margin-top: 8px; border-radius: 4px;"
+          />
+        </n-timeline-item>
 
         <!-- Новіші протоколи та TLS -->
         <n-timeline-item title="HTTP/2" content="2015 — мультиплексування, стиснення заголовків, пріоритезація потоків" />
