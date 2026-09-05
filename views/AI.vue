@@ -19,6 +19,40 @@
           </n-card>
         </n-grid-item>
       </n-grid>
+
+      <n-space vertical :size="20" style="text-align: left">
+        <!-- Загальне пояснення -->
+        <n-card embedded>
+          <n-p>
+            📝 <strong>Увага!</strong> Всі відповіді потрібно оформлювати <strong>у документі за посиланням</strong> з Google Drive, наведеним для кожної практичної роботи.
+            Бажано <strong>зробити резервну копію</strong> у себе локально (Google Docs, Word тощо).
+          </n-p>
+          <n-p>
+            🤖 <strong>Під час використання AI — аналізуйте текст самостійно 😉</strong>. Важливо розуміти, що ви пишете.
+          </n-p>
+        </n-card>
+
+        <!-- Практична робота №2 -->
+        <n-card embedded style="text-align: left">
+          <template #header>
+            <n-p>
+              🧪 <strong>Практична робота №2: Електронне урядування, штучний інтелект</strong>
+            </n-p>
+          </template>
+          <n-ul>
+            <n-li>
+              <n-a href="https://docs.google.com/document/d/1JzX25MhAfeh0hv3Fx5ssQwB3rmArG3ZoU-4vlIXuTzY/edit?usp=sharing" target="_blank">
+                10-А
+              </n-a>
+            </n-li>
+            <n-li>
+              <n-a href="https://docs.google.com/document/d/1JzX25MhAfeh0hv3Fx5ssQwB3rmArG3ZoU-4vlIXuTzY/edit?usp=sharing" target="_blank">
+                10-Б
+              </n-a>
+            </n-li>
+          </n-ul>
+        </n-card>
+      </n-space>
     </n-space>
   </n-page>
 </template>

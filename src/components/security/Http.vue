@@ -8,7 +8,14 @@
         <n-timeline-item title="HTTP/3" content="2020 — UDP (QUIC), краща швидкість з'єднання" />
         <n-timeline-item title="SSL 2.0 / 3.0" content="Спроби захисту HTTP, 1995 / 1996 роки" />
         <n-timeline-item title="TLS 1.0" content="Перший офіційний стандарт шифрування, 1999 рік" />
-        <n-timeline-item type="success" title="Зелена адресна стрічка (EV сертифікати)" content="2007 — браузери почали позначати сайти з EV-сертифікатами зеленим замком і назвою компанії" />
+        <n-timeline-item type="success" title="Зелена адресна стрічка (EV сертифікати)">
+          <div>2007 — браузери почали позначати сайти з EV-сертифікатами зеленим замком і назвою компанії</div>
+          <img
+              src="/ssl-sertificate-website-icon.png"
+              alt="EV Certificate Bar"
+              style="max-width: 100%; margin-top: 8px; border-radius: 4px;"
+          />
+        </n-timeline-item>
         <n-timeline-item title="TLS 1.3" content="Шифрування з перших байтів, 2018 рік" />
         <n-timeline-item type="warning" title="Скасування зеленої адреси" content="2020 — Chrome та інші припинили виділяти EV сертифікати; залишився лише замок" />
         <n-timeline-item title="Браузер Mosaic" content="Перший масовий графічний браузер, 1993 рік" />

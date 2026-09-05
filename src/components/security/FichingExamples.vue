@@ -153,7 +153,7 @@
         Пояснити
       </button>
     </div>
-    <n-button @click="showUsers = !showUsers">{{ showUsers ? 'Показати користувачів' : 'Сховати користувачів' }}</n-button>
+    <n-button @click="showUsers = !showUsers">{{ showUsers ? 'Сховати користувачів' : 'Показати користувачів' }}</n-button>
     <UserTable v-if="showUsers" />
 
     <div>Приклади фішингових атак:</div>
